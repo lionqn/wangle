@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23A68145DDCF4A19337CA2DD /* libPods-wangyi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE4DCE03FF7E95C0BD434249 /* libPods-wangyi.a */; };
 		30938A8F1E72CDFE007D3DA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938A8E1E72CDFE007D3DA9 /* main.m */; };
 		30938A921E72CDFE007D3DA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938A911E72CDFE007D3DA9 /* AppDelegate.m */; };
 		30938A951E72CDFE007D3DA9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938A941E72CDFE007D3DA9 /* ViewController.m */; };
@@ -51,6 +52,9 @@
 		30938AAE1E72CDFE007D3DA9 /* wangyiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wangyiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30938AB21E72CDFE007D3DA9 /* wangyiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wangyiUITests.m; sourceTree = "<group>"; };
 		30938AB41E72CDFE007D3DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AB33235B05DA05B6481FB3E /* Pods-wangyi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wangyi.release.xcconfig"; path = "Pods/Target Support Files/Pods-wangyi/Pods-wangyi.release.xcconfig"; sourceTree = "<group>"; };
+		9588B1CD725B8B5853FA9517 /* Pods-wangyi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wangyi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wangyi/Pods-wangyi.debug.xcconfig"; sourceTree = "<group>"; };
+		AE4DCE03FF7E95C0BD434249 /* libPods-wangyi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wangyi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A68145DDCF4A19337CA2DD /* libPods-wangyi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F410BD9D5DB81B341F7E993 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9588B1CD725B8B5853FA9517 /* Pods-wangyi.debug.xcconfig */,
+				5AB33235B05DA05B6481FB3E /* Pods-wangyi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		30938A811E72CDFE007D3DA9 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +99,8 @@
 				30938AA61E72CDFE007D3DA9 /* wangyiTests */,
 				30938AB11E72CDFE007D3DA9 /* wangyiUITests */,
 				30938A8B1E72CDFE007D3DA9 /* Products */,
+				0F410BD9D5DB81B341F7E993 /* Pods */,
+				AAAC9D12AA35AAC220584A4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +156,14 @@
 			path = wangyiUITests;
 			sourceTree = "<group>";
 		};
+		AAAC9D12AA35AAC220584A4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE4DCE03FF7E95C0BD434249 /* libPods-wangyi.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30938AB71E72CDFE007D3DA9 /* Build configuration list for PBXNativeTarget "wangyi" */;
 			buildPhases = (
+				B0588B464164FD62859C3ECD /* [CP] Check Pods Manifest.lock */,
 				30938A861E72CDFE007D3DA9 /* Sources */,
 				30938A871E72CDFE007D3DA9 /* Frameworks */,
 				30938A881E72CDFE007D3DA9 /* Resources */,
+				0462EE13DACC3BCECAE82279 /* [CP] Embed Pods Frameworks */,
+				2C364C56D1159CC49D2C9EF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +294,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0462EE13DACC3BCECAE82279 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wangyi/Pods-wangyi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C364C56D1159CC49D2C9EF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wangyi/Pods-wangyi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0588B464164FD62859C3ECD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30938A861E72CDFE007D3DA9 /* Sources */ = {
@@ -420,9 +495,11 @@
 		};
 		30938AB81E72CDFE007D3DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9588B1CD725B8B5853FA9517 /* Pods-wangyi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = wangyi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NNQ.wangyi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -431,9 +508,11 @@
 		};
 		30938AB91E72CDFE007D3DA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AB33235B05DA05B6481FB3E /* Pods-wangyi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = wangyi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NNQ.wangyi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,6 +584,7 @@
 				30938AB91E72CDFE007D3DA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30938ABA1E72CDFE007D3DA9 /* Build configuration list for PBXNativeTarget "wangyiTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +593,7 @@
 				30938ABC1E72CDFE007D3DA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30938ABD1E72CDFE007D3DA9 /* Build configuration list for PBXNativeTarget "wangyiUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +602,7 @@
 				30938ABF1E72CDFE007D3DA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
