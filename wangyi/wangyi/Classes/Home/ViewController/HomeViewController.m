@@ -9,6 +9,9 @@
 #import "HomeViewController.h"
 #import "ChannelModel.h"
 #import "ChannelLabel.h"
+#import "NewsCollectionViewCell.h"
+#import "NetworkTools.h"
+
 
 @interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -42,6 +45,8 @@ static NSString *cellid = @"cellid";
     
     // 新闻栏
     [self setupNewCollectionView];
+    
+    
 }
 
 
@@ -107,6 +112,9 @@ static NSString *cellid = @"cellid";
     self.newsCollectionView.showsHorizontalScrollIndicator = NO;
     self.newsCollectionView.showsVerticalScrollIndicator = NO;
     
+
+    
+   
     
 }
 
@@ -118,14 +126,19 @@ static NSString *cellid = @"cellid";
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellid forIndexPath:indexPath];
+    NewsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellid forIndexPath:indexPath];
     
     // 获取指定的频道模型
     ChannelModel *model = self.channelModelArray[indexPath.item];
     
+    // 获取频道id
     NSString *tid = model.tid;
     
-    cell.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1];
+    // 计算请求的urlStr
+    NSString *urlStr = [NSString stringWithFormat:@"%@/0-20.html",tid];
+    cell.urlStr = urlStr;
+    
+//    cell.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1];
     return cell;
 }
 

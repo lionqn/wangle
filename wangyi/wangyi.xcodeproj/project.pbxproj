@@ -19,6 +19,9 @@
 		30938ACA1E72DA02007D3DA9 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 30938AC91E72DA02007D3DA9 /* topic_news.json */; };
 		30938ACD1E72E6BF007D3DA9 /* ChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938ACC1E72E6BF007D3DA9 /* ChannelModel.m */; };
 		30938AD01E730915007D3DA9 /* ChannelLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938ACF1E730915007D3DA9 /* ChannelLabel.m */; };
+		30938AD31E731605007D3DA9 /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938AD21E731605007D3DA9 /* NewsTableViewController.m */; };
+		30938AD61E7316D1007D3DA9 /* NewsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938AD51E7316D1007D3DA9 /* NewsCollectionViewCell.m */; };
+		30938AD91E731B1F007D3DA9 /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938AD81E731B1F007D3DA9 /* NetworkTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,12 @@
 		30938ACC1E72E6BF007D3DA9 /* ChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelModel.m; sourceTree = "<group>"; };
 		30938ACE1E730915007D3DA9 /* ChannelLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelLabel.h; sourceTree = "<group>"; };
 		30938ACF1E730915007D3DA9 /* ChannelLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelLabel.m; sourceTree = "<group>"; };
+		30938AD11E731605007D3DA9 /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
+		30938AD21E731605007D3DA9 /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
+		30938AD41E7316D1007D3DA9 /* NewsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCollectionViewCell.h; sourceTree = "<group>"; };
+		30938AD51E7316D1007D3DA9 /* NewsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCollectionViewCell.m; sourceTree = "<group>"; };
+		30938AD71E731B1F007D3DA9 /* NetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTools.h; sourceTree = "<group>"; };
+		30938AD81E731B1F007D3DA9 /* NetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTools.m; sourceTree = "<group>"; };
 		5AB33235B05DA05B6481FB3E /* Pods-wangyi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wangyi.release.xcconfig"; path = "Pods/Target Support Files/Pods-wangyi/Pods-wangyi.release.xcconfig"; sourceTree = "<group>"; };
 		9588B1CD725B8B5853FA9517 /* Pods-wangyi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wangyi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wangyi/Pods-wangyi.debug.xcconfig"; sourceTree = "<group>"; };
 		AE4DCE03FF7E95C0BD434249 /* libPods-wangyi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wangyi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +206,8 @@
 			children = (
 				30938ACE1E730915007D3DA9 /* ChannelLabel.h */,
 				30938ACF1E730915007D3DA9 /* ChannelLabel.m */,
+				30938AD41E7316D1007D3DA9 /* NewsCollectionViewCell.h */,
+				30938AD51E7316D1007D3DA9 /* NewsCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +217,8 @@
 			children = (
 				30938AC61E72D9CE007D3DA9 /* HomeViewController.h */,
 				30938AC71E72D9CE007D3DA9 /* HomeViewController.m */,
+				30938AD11E731605007D3DA9 /* NewsTableViewController.h */,
+				30938AD21E731605007D3DA9 /* NewsTableViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -213,6 +226,8 @@
 		30938AC51E72D988007D3DA9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				30938AD71E731B1F007D3DA9 /* NetworkTools.h */,
+				30938AD81E731B1F007D3DA9 /* NetworkTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -410,8 +425,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30938AD31E731605007D3DA9 /* NewsTableViewController.m in Sources */,
 				30938A921E72CDFE007D3DA9 /* AppDelegate.m in Sources */,
 				30938A8F1E72CDFE007D3DA9 /* main.m in Sources */,
+				30938AD61E7316D1007D3DA9 /* NewsCollectionViewCell.m in Sources */,
+				30938AD91E731B1F007D3DA9 /* NetworkTools.m in Sources */,
 				30938AC81E72D9CE007D3DA9 /* HomeViewController.m in Sources */,
 				30938ACD1E72E6BF007D3DA9 /* ChannelModel.m in Sources */,
 				30938AD01E730915007D3DA9 /* ChannelLabel.m in Sources */,
