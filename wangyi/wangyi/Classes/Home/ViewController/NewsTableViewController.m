@@ -8,13 +8,22 @@
 
 #import "NewsTableViewController.h"
 #import "NetworkTools.h"
+#import "NewsModel.h"
 
 
 @interface NewsTableViewController ()
 
+// 新闻列表数据源
+@property (nonatomic, strong) NSArray *newsModelArray;;
+
+
 @end
 
+static NSString *cellID = @"cellID";
+
 @implementation NewsTableViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,6 +33,17 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    [self setupTableView];
+}
+
+
+// tableView 的相关设置
+-(void)setupTableView{
+    
+    // 注册单元格
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
 }
 
 
@@ -32,22 +52,30 @@
     _urlStr = urlStr;
     
 //    NSLog(@"%@",urlStr);
-        [[NetworkTools sharedTools] requestWithType:GET andUrlStr:urlStr andParams:nil andSuccess:^(id responseObject) {
+//        [[NetworkTools sharedTools] requestWithType:GET andUrlStr:urlStr andParams:nil andSuccess:^(id responseObject) {
+//    
+//            NSLog(@"%@",responseObject);
+//            
+//            NSDictionary *dic = (NSDictionary *) responseObject;
+//            NSString *key = dic.allKeys.firstObject;
+//            // 通过key获取新闻的数组字典
+//            NSArray *dicArray = [dic objectForKey:key];
+//            
+//            NSLog(@"%@",dicArray);
+//            
+//        } andFailture:^(NSError *error) {
+//    
+//            NSLog(@"%@",error);
+//            
+//        }];
     
-            NSLog(@"%@",responseObject);
-            
-            NSDictionary *dic = (NSDictionary *) responseObject;
-            NSString *key = dic.allKeys.firstObject;
-            // 通过key获取新闻的数组字典
-            NSArray *dicArray = [dic objectForKey:key];
-            
-            NSLog(@"%@",dicArray);
-            
-        } andFailture:^(NSError *error) {
     
-            NSLog(@"%@",error);
-            
-        }];
+    [NewsModel requestNewsModelArrayWithUrlStr:urlStr andCompletionBlock:^(NSArray *modelArray) {
+        
+        self.newsModelArray = modelArray;
+        // 获取数据
+        [self.tableView reloadData];
+    }];
     
 }
 
@@ -61,25 +89,28 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Incomplete implementation, return the number of sections
+//    return 0;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.newsModelArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     
+    NewsModel *model = self.newsModelArray[indexPath.row];
     // Configure the cell...
+    
+    cell.textLabel.text = model.title;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
