@@ -10,12 +10,15 @@
 		23A68145DDCF4A19337CA2DD /* libPods-wangyi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE4DCE03FF7E95C0BD434249 /* libPods-wangyi.a */; };
 		30938A8F1E72CDFE007D3DA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938A8E1E72CDFE007D3DA9 /* main.m */; };
 		30938A921E72CDFE007D3DA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938A911E72CDFE007D3DA9 /* AppDelegate.m */; };
-		30938A951E72CDFE007D3DA9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938A941E72CDFE007D3DA9 /* ViewController.m */; };
 		30938A981E72CDFE007D3DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30938A961E72CDFE007D3DA9 /* Main.storyboard */; };
 		30938A9A1E72CDFE007D3DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30938A991E72CDFE007D3DA9 /* Assets.xcassets */; };
 		30938A9D1E72CDFE007D3DA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30938A9B1E72CDFE007D3DA9 /* LaunchScreen.storyboard */; };
 		30938AA81E72CDFE007D3DA9 /* wangyiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938AA71E72CDFE007D3DA9 /* wangyiTests.m */; };
 		30938AB31E72CDFE007D3DA9 /* wangyiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938AB21E72CDFE007D3DA9 /* wangyiUITests.m */; };
+		30938AC81E72D9CE007D3DA9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938AC71E72D9CE007D3DA9 /* HomeViewController.m */; };
+		30938ACA1E72DA02007D3DA9 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 30938AC91E72DA02007D3DA9 /* topic_news.json */; };
+		30938ACD1E72E6BF007D3DA9 /* ChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938ACC1E72E6BF007D3DA9 /* ChannelModel.m */; };
+		30938AD01E730915007D3DA9 /* ChannelLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938ACF1E730915007D3DA9 /* ChannelLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +43,6 @@
 		30938A8E1E72CDFE007D3DA9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		30938A901E72CDFE007D3DA9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		30938A911E72CDFE007D3DA9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		30938A931E72CDFE007D3DA9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		30938A941E72CDFE007D3DA9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		30938A971E72CDFE007D3DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30938A991E72CDFE007D3DA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30938A9C1E72CDFE007D3DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +53,13 @@
 		30938AAE1E72CDFE007D3DA9 /* wangyiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wangyiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30938AB21E72CDFE007D3DA9 /* wangyiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wangyiUITests.m; sourceTree = "<group>"; };
 		30938AB41E72CDFE007D3DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30938AC61E72D9CE007D3DA9 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		30938AC71E72D9CE007D3DA9 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		30938AC91E72DA02007D3DA9 /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		30938ACB1E72E6BF007D3DA9 /* ChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelModel.h; sourceTree = "<group>"; };
+		30938ACC1E72E6BF007D3DA9 /* ChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelModel.m; sourceTree = "<group>"; };
+		30938ACE1E730915007D3DA9 /* ChannelLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelLabel.h; sourceTree = "<group>"; };
+		30938ACF1E730915007D3DA9 /* ChannelLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelLabel.m; sourceTree = "<group>"; };
 		5AB33235B05DA05B6481FB3E /* Pods-wangyi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wangyi.release.xcconfig"; path = "Pods/Target Support Files/Pods-wangyi/Pods-wangyi.release.xcconfig"; sourceTree = "<group>"; };
 		9588B1CD725B8B5853FA9517 /* Pods-wangyi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wangyi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wangyi/Pods-wangyi.debug.xcconfig"; sourceTree = "<group>"; };
 		AE4DCE03FF7E95C0BD434249 /* libPods-wangyi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wangyi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,12 +125,12 @@
 		30938A8C1E72CDFE007D3DA9 /* wangyi */ = {
 			isa = PBXGroup;
 			children = (
+				30938AC01E72D988007D3DA9 /* Classes */,
 				30938A901E72CDFE007D3DA9 /* AppDelegate.h */,
 				30938A911E72CDFE007D3DA9 /* AppDelegate.m */,
-				30938A931E72CDFE007D3DA9 /* ViewController.h */,
-				30938A941E72CDFE007D3DA9 /* ViewController.m */,
 				30938A961E72CDFE007D3DA9 /* Main.storyboard */,
 				30938A991E72CDFE007D3DA9 /* Assets.xcassets */,
+				30938AC91E72DA02007D3DA9 /* topic_news.json */,
 				30938A9B1E72CDFE007D3DA9 /* LaunchScreen.storyboard */,
 				30938A9E1E72CDFE007D3DA9 /* Info.plist */,
 				30938A8D1E72CDFE007D3DA9 /* Supporting Files */,
@@ -154,6 +162,59 @@
 				30938AB41E72CDFE007D3DA9 /* Info.plist */,
 			);
 			path = wangyiUITests;
+			sourceTree = "<group>";
+		};
+		30938AC01E72D988007D3DA9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				30938AC11E72D988007D3DA9 /* Home */,
+				30938AC51E72D988007D3DA9 /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		30938AC11E72D988007D3DA9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				30938AC21E72D988007D3DA9 /* Model */,
+				30938AC31E72D988007D3DA9 /* View */,
+				30938AC41E72D988007D3DA9 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		30938AC21E72D988007D3DA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30938ACB1E72E6BF007D3DA9 /* ChannelModel.h */,
+				30938ACC1E72E6BF007D3DA9 /* ChannelModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30938AC31E72D988007D3DA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30938ACE1E730915007D3DA9 /* ChannelLabel.h */,
+				30938ACF1E730915007D3DA9 /* ChannelLabel.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30938AC41E72D988007D3DA9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				30938AC61E72D9CE007D3DA9 /* HomeViewController.h */,
+				30938AC71E72D9CE007D3DA9 /* HomeViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		30938AC51E72D988007D3DA9 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		AAAC9D12AA35AAC220584A4F /* Frameworks */ = {
@@ -275,6 +336,7 @@
 			files = (
 				30938A9D1E72CDFE007D3DA9 /* LaunchScreen.storyboard in Resources */,
 				30938A9A1E72CDFE007D3DA9 /* Assets.xcassets in Resources */,
+				30938ACA1E72DA02007D3DA9 /* topic_news.json in Resources */,
 				30938A981E72CDFE007D3DA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,9 +410,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30938A951E72CDFE007D3DA9 /* ViewController.m in Sources */,
 				30938A921E72CDFE007D3DA9 /* AppDelegate.m in Sources */,
 				30938A8F1E72CDFE007D3DA9 /* main.m in Sources */,
+				30938AC81E72D9CE007D3DA9 /* HomeViewController.m in Sources */,
+				30938ACD1E72E6BF007D3DA9 /* ChannelModel.m in Sources */,
+				30938AD01E730915007D3DA9 /* ChannelLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
