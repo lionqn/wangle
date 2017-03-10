@@ -27,6 +27,8 @@
 
 @end
 
+static NSString *cellid = @"cellid";
+
 @implementation HomeViewController
 
 - (void)viewDidLoad {
@@ -35,7 +37,11 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    // 标签栏
     [self requestChannelData];
+    
+    // 新闻栏
+    [self setupNewCollectionView];
 }
 
 
@@ -83,8 +89,47 @@
 -(void)setupNewCollectionView{
     
     // 设置数据源代理
+    self.newsCollectionView.dataSource = self;
+    self.newsCollectionView.delegate = self;
+    
+    self.flowLayout.itemSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height - 64 - 44);
+    
+    // 间距
+    self.flowLayout.minimumLineSpacing = 0;
+    self.flowLayout.minimumInteritemSpacing = 0;
+    // 滑动方向
+    self.flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    
+    // 弹簧效果
+    self.newsCollectionView.bounces = NO;
+    // 分页效果
+    self.newsCollectionView.pagingEnabled = YES;
+    self.newsCollectionView.showsHorizontalScrollIndicator = NO;
+    self.newsCollectionView.showsVerticalScrollIndicator = NO;
+    
     
 }
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.channelModelArray.count;
+}
+
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellid forIndexPath:indexPath];
+    
+    // 获取指定的频道模型
+    ChannelModel *model = self.channelModelArray[indexPath.item];
+    
+    NSString *tid = model.tid;
+    
+    cell.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1];
+    return cell;
+}
+
+
 
 
 
