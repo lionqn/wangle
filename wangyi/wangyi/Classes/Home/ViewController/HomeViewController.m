@@ -49,7 +49,7 @@ static NSString *cellid = @"cellid";
     
 }
 
-
+// 标签栏
 -(void)requestChannelData{
     
     self.channelModelArray = [ChannelModel getChannelModelArray];

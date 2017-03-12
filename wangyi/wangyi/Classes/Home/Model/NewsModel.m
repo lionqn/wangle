@@ -9,8 +9,14 @@
 #import "NewsModel.h"
 #import "NetworkTools.h"
 #import <YYModel.h>
+#import "PictureInfo.h"
 
 @implementation NewsModel
+
+// 模型容器属性(nsarray,nsset)指定对应的class
+//+(NSDictionary *)modelContainerPropertyGenericClass{
+//    return @{@"imgextra" : [PictureInfo class]};
+//}
 
 +(void)requestNewsModelArrayWithUrlStr:(NSString *)urlStr andCompletionBlock:(void(^)(NSArray *modelArray))completionBlock{
     

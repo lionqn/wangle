@@ -9,6 +9,8 @@
 #import "NewsTableViewController.h"
 #import "NetworkTools.h"
 #import "NewsModel.h"
+#import "NewsTableViewCell.h"
+
 
 
 @interface NewsTableViewController ()
@@ -43,7 +45,12 @@ static NSString *cellID = @"cellID";
 -(void)setupTableView{
     
     // 注册单元格
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+    [self.tableView registerNib:[UINib nibWithNibName:@"BaseCell" bundle:nil] forCellReuseIdentifier:@"baseCell"];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"BigCell" bundle:nil] forCellReuseIdentifier:@"bigCell"];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"ImageCell" bundle:nil] forCellReuseIdentifier:@"imageCell"];
 }
 
 
@@ -101,16 +108,51 @@ static NSString *cellID = @"cellID";
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    
     
     NewsModel *model = self.newsModelArray[indexPath.row];
+    
+    NewsTableViewCell *cell;
+    if (model.imgType) {
+       
+       cell = [tableView dequeueReusableCellWithIdentifier:@"bigCell" forIndexPath:indexPath];
+        
+    }else if (model.imgextra.count == 2){
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
+    }else{
+        cell = [tableView dequeueReusableCellWithIdentifier:@"baseCell" forIndexPath:indexPath];
+    }
+ 
+    
+    
     // Configure the cell...
     
-    cell.textLabel.text = model.title;
+//    cell.textLabel.text = model.title;
+    cell.newsModel = model;
     
     return cell;
 }
 
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NewsModel *model = self.newsModelArray[indexPath.row];
+    if (model.imgType) {
+        
+        return 130;
+        
+    }else if (model.imgextra.count == 2){
+        
+        return 180;
+        
+    } else{
+        
+        return 80;
+    }
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

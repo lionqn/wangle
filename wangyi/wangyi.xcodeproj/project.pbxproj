@@ -23,6 +23,11 @@
 		30938AD61E7316D1007D3DA9 /* NewsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938AD51E7316D1007D3DA9 /* NewsCollectionViewCell.m */; };
 		30938AD91E731B1F007D3DA9 /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938AD81E731B1F007D3DA9 /* NetworkTools.m */; };
 		30938ADC1E732981007D3DA9 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938ADB1E732981007D3DA9 /* NewsModel.m */; };
+		30938AE01E74287F007D3DA9 /* BaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30938ADF1E74287F007D3DA9 /* BaseCell.xib */; };
+		30938AE31E742DA0007D3DA9 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938AE21E742DA0007D3DA9 /* NewsTableViewCell.m */; };
+		30938AE51E742E15007D3DA9 /* BigCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30938AE41E742E15007D3DA9 /* BigCell.xib */; };
+		30938AE71E742ED8007D3DA9 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30938AE61E742ED8007D3DA9 /* ImageCell.xib */; };
+		30938AEA1E75A63C007D3DA9 /* PictureInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 30938AE91E75A63C007D3DA9 /* PictureInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +77,13 @@
 		30938AD81E731B1F007D3DA9 /* NetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTools.m; sourceTree = "<group>"; };
 		30938ADA1E732981007D3DA9 /* NewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
 		30938ADB1E732981007D3DA9 /* NewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
+		30938ADF1E74287F007D3DA9 /* BaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BaseCell.xib; path = wangyi/Classes/Home/ViewController/BaseCell.xib; sourceTree = SOURCE_ROOT; };
+		30938AE11E742DA0007D3DA9 /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		30938AE21E742DA0007D3DA9 /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		30938AE41E742E15007D3DA9 /* BigCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BigCell.xib; sourceTree = "<group>"; };
+		30938AE61E742ED8007D3DA9 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		30938AE81E75A63C007D3DA9 /* PictureInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureInfo.h; sourceTree = "<group>"; };
+		30938AE91E75A63C007D3DA9 /* PictureInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureInfo.m; sourceTree = "<group>"; };
 		5AB33235B05DA05B6481FB3E /* Pods-wangyi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wangyi.release.xcconfig"; path = "Pods/Target Support Files/Pods-wangyi/Pods-wangyi.release.xcconfig"; sourceTree = "<group>"; };
 		9588B1CD725B8B5853FA9517 /* Pods-wangyi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wangyi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wangyi/Pods-wangyi.debug.xcconfig"; sourceTree = "<group>"; };
 		AE4DCE03FF7E95C0BD434249 /* libPods-wangyi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wangyi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +214,8 @@
 				30938ACC1E72E6BF007D3DA9 /* ChannelModel.m */,
 				30938ADA1E732981007D3DA9 /* NewsModel.h */,
 				30938ADB1E732981007D3DA9 /* NewsModel.m */,
+				30938AE81E75A63C007D3DA9 /* PictureInfo.h */,
+				30938AE91E75A63C007D3DA9 /* PictureInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +227,11 @@
 				30938ACF1E730915007D3DA9 /* ChannelLabel.m */,
 				30938AD41E7316D1007D3DA9 /* NewsCollectionViewCell.h */,
 				30938AD51E7316D1007D3DA9 /* NewsCollectionViewCell.m */,
+				30938AE11E742DA0007D3DA9 /* NewsTableViewCell.h */,
+				30938AE21E742DA0007D3DA9 /* NewsTableViewCell.m */,
+				30938ADF1E74287F007D3DA9 /* BaseCell.xib */,
+				30938AE41E742E15007D3DA9 /* BigCell.xib */,
+				30938AE61E742ED8007D3DA9 /* ImageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -354,8 +373,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30938AE51E742E15007D3DA9 /* BigCell.xib in Resources */,
 				30938A9D1E72CDFE007D3DA9 /* LaunchScreen.storyboard in Resources */,
+				30938AE71E742ED8007D3DA9 /* ImageCell.xib in Resources */,
 				30938A9A1E72CDFE007D3DA9 /* Assets.xcassets in Resources */,
+				30938AE01E74287F007D3DA9 /* BaseCell.xib in Resources */,
 				30938ACA1E72DA02007D3DA9 /* topic_news.json in Resources */,
 				30938A981E72CDFE007D3DA9 /* Main.storyboard in Resources */,
 			);
@@ -430,12 +452,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30938AEA1E75A63C007D3DA9 /* PictureInfo.m in Sources */,
 				30938AD31E731605007D3DA9 /* NewsTableViewController.m in Sources */,
 				30938A921E72CDFE007D3DA9 /* AppDelegate.m in Sources */,
 				30938A8F1E72CDFE007D3DA9 /* main.m in Sources */,
 				30938AD61E7316D1007D3DA9 /* NewsCollectionViewCell.m in Sources */,
 				30938ADC1E732981007D3DA9 /* NewsModel.m in Sources */,
 				30938AD91E731B1F007D3DA9 /* NetworkTools.m in Sources */,
+				30938AE31E742DA0007D3DA9 /* NewsTableViewCell.m in Sources */,
 				30938AC81E72D9CE007D3DA9 /* HomeViewController.m in Sources */,
 				30938ACD1E72E6BF007D3DA9 /* ChannelModel.m in Sources */,
 				30938AD01E730915007D3DA9 /* ChannelLabel.m in Sources */,

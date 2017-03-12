@@ -20,7 +20,9 @@
 @property (nonatomic, copy) NSString *source;
 
 // 新闻回复数
-@property (nonatomic, assign) NSInteger *replyCount;
+//@property (nonatomic, assign) NSInteger *replyCount;
+@property (nonatomic, copy) NSString *replyCount;
+
 
 // 多张配图
 @property (nonatomic, strong) NSArray *imgextra;
