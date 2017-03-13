@@ -48,23 +48,23 @@
         
         
         // 获取对应的图片字典
-        NSDictionary *imageDic = newsModel.imgextra[i];
+//        NSDictionary *imageDic = newsModel.imgextra[i];
+//        
+//        // 通过key获取图片的地址
+//        NSString *imagePath = [imageDic objectForKey:@"imgsrc"];
+//        
+//        UIImageView *imageView = self.iconImagesImageView[i];
+//        [imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
         
-        // 通过key获取图片的地址
-        NSString *imagePath = [imageDic objectForKey:@"imgsrc"];
-        
-        UIImageView *imageView = self.iconImagesImageView[i];
-        [imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
         
         
-        
-        // 获取下标对应的模型
-//        PictureInfo *pic = newsModel.imgextra[i];
+//         获取下标对应的模型
+        PictureInfo *pic = newsModel.imgextra[i];
         
         // 获取对应的imageView
-//        UIImageView *imageView = self.iconImagesImageView[i];
+        UIImageView *imageView = self.iconImagesImageView[i];
 //        
-//        [imageView sd_setImageWithURL:[NSURL URLWithString:pic.imgsrc] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:pic.imgsrc] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
         
     }
     
